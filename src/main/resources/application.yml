@@ -1,0 +1,36 @@
+app:
+  index:
+    message: Esto es un mensage desde index
+
+spring:
+  groovy:
+    template:
+      cache: false
+      check-template-location: true
+  mvc:
+    favicon:
+      enabled: false
+
+  profiles:
+    active:
+      - dev
+      - prod
+
+  devtools:
+    livereload:
+      enabled: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fcia
+    username: iodev
+    password: iodev
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
